@@ -1,70 +1,89 @@
-# 📚 Data Structures Implementations: Stacks and Queues
+# 🚀 Data-Structures-Implementations
 
-This repository contains fundamental implementations of the Queue and Stack data structures using two common underlying mechanisms: Arrays and Linked Lists.  
-These examples are crucial for understanding the trade-offs and performance characteristics of each approach.
-
----
-
-## 💻 Included Implementations
-
-The repository includes four distinct code files, demonstrating each data structure and implementation method.
-
-| Data Structure | Implementation | File/Code Name | Description |
-|---|---|---|---|
-| Queue (FIFO) | Linked List | linked_list_queue | Uses dynamic nodes (no fixed size array) for efficient Enqueue and Dequeue (O(1)). |
-| Queue (FIFO) | Array | array_queue | Uses a fixed-size array (often with a circular buffer approach) for faster element access (O(1) at index) but requires pre-defined size. |
-| Stack (LIFO) | Linked List | linked_list_stack | Uses dynamic nodes for efficient Push and Pop operations (O(1)) without fixed-size limitations. |
-| Stack (LIFO) | Array | array_stack | Uses a fixed-size array where Push and Pop operate at one end (the "top") for fast, cache-friendly operations (O(1)). |
+A collection of beginner-friendly **C programs** demonstrating fundamental implementations of **Stacks and Queues** using two core mechanisms: **Arrays** and **Linked Lists**.  
+This repository helps learners **understand memory management, performance trade-offs, and operational logic** behind these crucial data structures.
 
 ---
 
-## 🛠️ Key Differences and Rationale
+> **Note:** Avoid uploading compiled `.exe` or temporary build files to version control.  
+> Add them to `.gitignore` if necessary.
 
-The choice between an Array-based or Linked List-based implementation depends on the specific use case, primarily due to their different memory management and performance characteristics.
+---
 
-### Queue Implementations
+## 📂 Project Structure
+
+/ (root)  
+│── array_queue.c           # 📦 Queue implementation using array  
+│── linked_list_queue.c     # 🔗 Queue implementation using linked list  
+│── array_stack.c           # 📚 Stack implementation using array  
+│── linked_list_stack.c     # 🧱 Stack implementation using linked list  
+
+---
+
+## 🧩 Programs & Key Concepts
+
+| Data Structure | Implementation | File Name | Description | Key Concepts |
+| --------------- | -------------- | ---------- | ------------ | ------------- |
+| **Queue (FIFO)** | Linked List | `linked_list_queue.c` | Uses dynamic nodes (no fixed array size) for efficient enqueue/dequeue. | Dynamic memory, pointers, O(1) operations |
+| **Queue (FIFO)** | Array | `array_queue.c` | Uses a fixed-size circular buffer for efficient element access. | Arrays, circular indexing, O(1) operations |
+| **Stack (LIFO)** | Linked List | `linked_list_stack.c` | Implements push/pop with linked nodes for unlimited growth. | Pointers, dynamic memory |
+| **Stack (LIFO)** | Array | `array_stack.c` | Implements push/pop at top index for fast access. | Arrays, top index tracking, O(1) operations |
+
+---
+
+## ⚖️ Key Differences and Rationale
+
+Choosing between **Array-based** and **Linked List-based** structures depends on memory and performance needs.
+
+### Queue Comparison
 
 | Feature | Linked List Queue | Array Queue (Circular Buffer) |
-|---|---|---|
-| Size | Dynamic (grows/shrinks as needed). | Fixed (size must be declared in advance). |
-| Enqueue/Dequeue | O(1) time complexity. | O(1) time complexity (using circular array logic). |
-| Memory | Uses more memory per element (for pointers). | Uses less memory per element (no pointer overhead). |
-| Resizing | Simple (no manual resizing needed). | Complex/Costly if the queue capacity needs to change (requires new array allocation and copy). |
+| -------- | ---------------- | ----------------------------- |
+| Size | Dynamic (auto-grows) | Fixed (predefined) |
+| Enqueue/Dequeue | O(1) | O(1) (with circular logic) |
+| Memory | Extra pointer overhead | Compact, less overhead |
+| Resizing | Automatic | Requires array copy and reallocation |
 
 ---
 
-### Stack Implementations
+### Stack Comparison
 
 | Feature | Linked List Stack | Array Stack |
-|---|---|---|
-| Size | Dynamic (efficient for unknown or highly variable size). | Fixed (can lead to overflow if size is exceeded). |
-| Push/Pop | O(1) time complexity (at the head/top). | O(1) time complexity (at the end/top index). |
-| Memory | More memory overhead due to node pointers. | Less memory overhead; contiguous memory is cache-friendly and often faster for small to moderate data sizes. |
-| Use Case | Ideal when the maximum size is unknown or very large, prioritizing memory efficiency over initial allocation. | Ideal when the maximum size is known or for performance-critical applications with frequent operations on smaller data sets. |
+| -------- | ---------------- | ------------ |
+| Size | Dynamic | Fixed |
+| Push/Pop | O(1) | O(1) |
+| Memory | More (pointer overhead) | Less (contiguous memory) |
+| Use Case | When size unknown | When max size known |
 
 ---
 
-## 📜 Code Structure (Placeholder)
+## 🔧 Core Operations
 
-Each file will typically contain the core class/struct definition and the essential data structure operations.
+### Queue (FIFO – First In, First Out)
 
-### Queue Operations (FIFO - First-In, First-Out)
-- enqueue(item): Adds an item to the rear of the queue.  
-- dequeue(): Removes and returns the item from the front of the queue.  
-- peek(): Returns the item at the front without removing it.
+- `enqueue(item)` → Add item to the rear  
+- `dequeue()` → Remove item from the front  
+- `peek()` → View the front item without removing  
 
-### Stack Operations (LIFO - Last-In, First-Out)
-- push(item): Adds an item to the top of the stack.  
-- pop(): Removes and returns the item from the top of the stack.  
-- peek(): Returns the item at the top without removing it.
+### Stack (LIFO – Last In, First Out)
+
+- `push(item)` → Add item to the top  
+- `pop()` → Remove item from the top  
+- `peek()` → View the top item without removing  
 
 ---
 
-## 🧩 Example Placeholder
+## 💻 How to Compile and Run
 
-```c
-// Example of how a code block placeholder would look
-// This is for demonstration, as you did not provide the code itself.
+1. Clone the repository:
 
-// Code for array_queue implementation
-// (Insert actual code here)
+   ```bash
+   git clone https://github.com/chaitanyasivathmika19/C-DSA.git
+   cd C-DSA
+
+2. Compile the desired file:
+   ```bash
+   gcc filename.c -o outputname
+3. Run the program:
+   ```bash
+   ./outputname
