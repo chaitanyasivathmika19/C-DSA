@@ -87,3 +87,23 @@ Choosing between **Array-based** and **Linked List-based** structures depends on
 3. Run the program:
    ```bash
    ./outputname
+
+## 🧠 Why This Repo?
+
+- ✅ Understand **core data structure mechanics** in C.  
+- ✅ Learn **stack and queue operations** using both static and dynamic memory.  
+- ✅ Build a foundation for **advanced DSA topics** like graphs, trees, and linked structures.  
+
+---
+
+## 📚 Resources & References
+
+- [C Programming Language (Kernighan & Ritchie)](https://en.wikipedia.org/wiki/The_C_Programming_Language)  
+- [GeeksforGeeks – Stacks & Queues in C](https://www.geeksforgeeks.org/stack-data-structure/)  
+- [HackerRank – Data Structures Practice](https://www.hackerrank.com/domains/data-structures)  
+
+---
+
+## 📌 License
+
+This project is open-source and available under the **MIT License**.
