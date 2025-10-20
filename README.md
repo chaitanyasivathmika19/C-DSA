@@ -90,6 +90,8 @@ Choosing between **Array-based** and **Linked List-based** structures depends on
 
 Example: `./stack_app`
 
+---
+
 ## 🧠 Why This Repo?
 
 - ✅ Understand **core data structure mechanics** in C.  
